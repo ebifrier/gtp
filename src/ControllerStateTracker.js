@@ -175,7 +175,7 @@ class ControllerStateTracker {
   }
 
   async queueCommand(...args) {
-    return await this._addToQueue({type: 'command', args})
+    return await this.controller.sendCommand(...args)
   }
 
   async _sync(state) {
